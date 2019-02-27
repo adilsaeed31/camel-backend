@@ -7,7 +7,7 @@
     "start": "nodemon app.js",
     "start:prod": "node app.js"
   },
-  "author": "",
+  "author": "Muhammad Adil",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
