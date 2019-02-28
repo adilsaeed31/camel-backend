@@ -33,10 +33,13 @@ app.use(
 )
 
 mongoose
-  .connect(`mongodb://localhost:27017/camel`)
+  .connect(`mongodb://localhost:27017/camel`, {
+    useNewUrlParser: true
+  })
   .then(() => {
     app.listen(8000)
   })
   .catch(err => {
     console.log(err)
+    throw err
   })

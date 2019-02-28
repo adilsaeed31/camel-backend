@@ -1,37 +1,37 @@
 const DataLoader = require("dataloader")
 
-const Event = require("../../models/event")
+const Race = require("../../models/race")
 
-const eventLoader = new DataLoader(eventIds => {
-  return events(eventIds)
+const raceLoader = new DataLoader(raceIds => {
+  return races(raceIds)
 })
 
-const events = async eventIds => {
+const races = async raceIds => {
   try {
-    const events = await Event.find({ _id: { $in: eventIds } })
-    events.sort((a, b) => {
+    const races = await Race.find({ _id: { $in: raceIds } })
+    races.sort((a, b) => {
       return (
-        eventIds.indexOf(a._id.toString()) - eventIds.indexOf(b._id.toString())
+        raceIds.indexOf(a._id.toString()) - raceIds.indexOf(b._id.toString())
       )
     })
-    return events.map(event => {
-      return transformEvent(event)
+    return races.map(race => {
+      return transformRace(race)
     })
   } catch (err) {
     throw err
   }
 }
 
-const singleEvent = async eventId => {
+const singleRace = async raceId => {
   try {
-    const event = await eventLoader.load(eventId.toString())
-    return event
+    const race = await raceLoader.load(raceId.toString())
+    return race
   } catch (err) {
     throw err
   }
 }
 
-const transformEvent = event => {
+const transformRace = event => {
   return {
     ...event._doc,
     _id: event.id,
@@ -39,4 +39,4 @@ const transformEvent = event => {
   }
 }
 
-exports.transformEvent = transformEvent
+exports.transformRace = transformRace

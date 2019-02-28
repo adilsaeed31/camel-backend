@@ -1,7 +1,7 @@
-const eventsResolver = require("./events")
+const camelResolver = require("./camel")
 
 const rootResolver = {
-  ...eventsResolver
+  ...camelResolver
 }
 
 module.exports = rootResolver
