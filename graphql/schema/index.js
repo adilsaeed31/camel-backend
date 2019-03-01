@@ -3,19 +3,59 @@ const { buildSchema } = require("graphql")
 module.exports = buildSchema(`
 type Race {
   _id: ID!
-  title: String!
-  description: String!
-  date: String!
+  name: String!,
+  totalPoints: Int!,
+  code: Int!,
+  position: Int!,
+  ranks: [Ranks!]!
+  events: [Events!]!
 } 
 
-type AuthData {
-  token: String!
+type Ranks {
+  position: Int!,
+  category1: Int!,
+  category2: Int!,
+  category3: Int!,
+  category4: Int!,
+  category5: Int!
+}
+
+type Events {
+  eventName: String!
+  points: Int!,
+  date: String!
+  rounds: Int!,
+  position: Int!,
+  time: String!
+  age: Int!
 }
 
 input RaceInput {
-  title: String!
-  description: String!
+  name: String!,
+  totalPoints: Int!,
+  code: Int!,
+  position: Int!,
+  ranks: [RanksInput!]!
+  events: [EventsInput!]!
+}
+
+input RanksInput {
+  position: Int!,
+  category1: Int!,
+  category2: Int!,
+  category3: Int!,
+  category4: Int!,
+  category5: Int!
+}
+
+input EventsInput {
+  eventName: String!
+  points: Int!,
   date: String!
+  rounds: Int!,
+  position: Int!,
+  time: String!
+  age: Int!
 }
 
 type RootQuery {

@@ -2,6 +2,8 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const graphqlHttp = require("express-graphql")
 const mongoose = require("mongoose")
+const path = require('path');
+const { Seeder } = require('mongo-seeding');
 
 const graphQlSchema = require("./graphql/schema/index")
 const graphQlResolvers = require("./graphql/resolvers/index")
@@ -33,7 +35,7 @@ app.use(
 )
 
 mongoose
-  .connect(`mongodb://localhost:27017/camel`, {
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true
   })
   .then(() => {
@@ -43,3 +45,20 @@ mongoose
     console.log(err)
     throw err
   })
+
+const config = {
+  database: process.env.MONGO_URL,
+  dropDatabase: true,
+};
+
+const seeder = new Seeder(config);
+const collections = seeder.readCollectionsFromPath(path.resolve('./util/db/'));
+
+seeder
+  .import(collections)
+  .then(() => {
+    console.log('Successfully Seeded');
+  })
+  .catch(err => {
+    console.log('Error', err);
+  });

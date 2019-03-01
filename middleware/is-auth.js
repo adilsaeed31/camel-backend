@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken")
+const { token } = require("../util/index")
 
 module.exports = (req, res, next) => {
   const authHeader = req.get("Authorization")
@@ -6,10 +7,8 @@ module.exports = (req, res, next) => {
     req.isAuth = false
     return next()
   }
-  // const token = authHeader.split(" ")[1]
-  const token =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiY2FtZWxyYWNlIn0.KmX0KBu3z2_EIBF1Fyd-p9zm1r3J5ixfD8R_5sSHfrs"
-  if (!token || token === "") {
+  const apiToken = token
+  if (!apiToken || apiToken === "") {
     req.isAuth = false
     return next()
   }

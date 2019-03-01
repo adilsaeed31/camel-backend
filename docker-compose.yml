@@ -1,0 +1,25 @@
+version: "3.4"
+services:
+  backend:
+    build:
+      context: .
+      target: development
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/usr/src/app/server
+    environment:
+      NODE_ENV: development
+      MONGO_URL: mongodb://db:27017/camel
+    stdin_open: true
+    tty: true
+  db:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - dbdata:/data/db
+volumes:
+  dbdata:
