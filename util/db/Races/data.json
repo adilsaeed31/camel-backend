@@ -30,14 +30,14 @@
 				"category5": 1
 			}
 		],
-		"rows": [
+		"events": [
 			{
 				"eventName": "مهرجان ولي عهد دبي",
 				"points": 12,
 				"date": "2019-02-26",
 				"rounds": 3,
 				"position": 1,
-				"time": "3: 54: 00",
+				"time": "03:54:00",
 				"age": 5
 			},
 			{
@@ -46,7 +46,7 @@
 				"date": "2019-01-24",
 				"rounds": 2,
 				"position": 2,
-				"time": "3: 55: 00",
+				"time": "03:55:00",
 				"age": 3
 			},
 			{
@@ -55,14 +55,13 @@
 				"date": "2019-02-20",
 				"rounds": 1,
 				"position": 3,
-				"time": "3: 56: 00",
+				"time": "03:56:00",
 				"age": 4
 			}
 		],
 		"color": "#fff3b0"
 	},
 	{
-	 
 		"name": "سيف علي راشد سويلم بن كليب",
 		"totalPoints": "40",
 		"code": "7",
@@ -93,14 +92,14 @@
 				"category5": 1
 			}
 		],
-		"rows": [
+		"events": [
 			{
 				"eventName": "مهرجان ولي عهد دبي",
 				"points": 12,
 				"date": "2019-02-26",
 				"rounds": 3,
 				"position": 1,
-				"time": "3: 54: 00",
+				"time": "03:54:00",
 				"age": 5
 			},
 			{
@@ -109,7 +108,7 @@
 				"date": "2019-01-24",
 				"rounds": 2,
 				"position": 2,
-				"time": "3: 55: 00",
+				"time": "03:55:00",
 				"age": 3
 			},
 			{
@@ -118,7 +117,7 @@
 				"date": "2019-02-20",
 				"rounds": 1,
 				"position": 3,
-				"time": "3: 56: 00",
+				"time": "03:56:00",
 				"age": 4
 			}
 		],
@@ -155,14 +154,14 @@
 				"category5": 1
 			}
 		],
-		"rows": [
+		"events": [
 			{
 				"eventName": "مهرجان ولي عهد دبي",
 				"points": 12,
 				"date": "2019-02-26",
 				"rounds": 3,
 				"position": 1,
-				"time": "3: 54: 00",
+				"time": "03:54:00",
 				"age": 5
 			},
 			{
@@ -171,7 +170,7 @@
 				"date": "2019-01-24",
 				"rounds": 2,
 				"position": 2,
-				"time": "3: 55: 00",
+				"time": "03:55:00",
 				"age": 3
 			},
 			{
@@ -180,14 +179,13 @@
 				"date": "2019-02-20",
 				"rounds": 1,
 				"position": 3,
-				"time": "3: 56: 00",
+				"time": "03:56:00",
 				"age": 4
 			}
 		],
 		"color": "#D8B7A4"
 	},
 	{
-	 
 		"name": "محمد راشد بن غدير الكتبي",
 		"totalPoints": "40",
 		"code": "7",
@@ -218,14 +216,14 @@
 				"category5": 1
 			}
 		],
-		"rows": [
+		"events": [
 			{
 				"eventName": "مهرجان ولي عهد دبي",
 				"points": 12,
 				"date": "2019-02-26",
 				"rounds": 3,
 				"position": 1,
-				"time": "3: 54: 00",
+				"time": "03:54:00",
 				"age": 5
 			},
 			{
@@ -234,7 +232,7 @@
 				"date": "2019-01-24",
 				"rounds": 2,
 				"position": 2,
-				"time": "3: 55: 00",
+				"time": "03:55:00",
 				"age": 3
 			},
 			{
@@ -243,7 +241,69 @@
 				"date": "2019-02-20",
 				"rounds": 1,
 				"position": 3,
-				"time": "3: 56: 00",
+				"time": "03:56:00",
+				"age": 4
+			}
+		],
+		"color": "#FFFFFF"
+	},
+	{
+		"name": "محمد راشد بن غدير الكتبي",
+		"totalPoints": "40",
+		"code": "7",
+		"position": "4",
+		"ranks": [
+			{
+				"position": "rank_1",
+				"category1": 2,
+				"category2": 0,
+				"category3": 15,
+				"category4": 1,
+				"category5": 5
+			},
+			{
+				"position": "rank_2",
+				"category1": 2,
+				"category2": 1,
+				"category3": 0,
+				"category4": 3,
+				"category5": 5
+			},
+			{
+				"position": "rank_3",
+				"category1": 6,
+				"category2": 7,
+				"category3": 4,
+				"category4": 2,
+				"category5": 1
+			}
+		],
+		"events": [
+			{
+				"eventName": "مهرجان ولي عهد دبي",
+				"points": 12,
+				"date": "2019-02-26",
+				"rounds": 3,
+				"position": 1,
+				"time": "03:54:00",
+				"age": 5
+			},
+			{
+				"eventName": "مهرجان الشيخ محمد بن زايد التلة",
+				"points": 2,
+				"date": "2019-01-24",
+				"rounds": 2,
+				"position": 2,
+				"time": "03:55:00",
+				"age": 3
+			},
+			{
+				"eventName": "جائزة زايد الكبرى",
+				"points": 10,
+				"date": "2019-02-20",
+				"rounds": 1,
+				"position": 3,
+				"time": "03:56:00",
 				"age": 4
 			}
 		],

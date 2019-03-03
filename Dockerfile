@@ -1,6 +1,7 @@
 FROM node:8 as base
 RUN mkdir -p /usr/src/app/server
 WORKDIR /usr/src/app/server
+COPY package.json ./
 
 FROM base as development
 ENV NODE_ENV development

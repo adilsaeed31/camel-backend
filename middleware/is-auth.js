@@ -14,7 +14,6 @@ module.exports = (req, res, next) => {
 	let decodedToken
 	try {
 		decodedToken = jwt.verify(apiToken, 'camelrace')
-		console.log(decodedToken, 'decodedToken')
 	} catch (err) {
 		req.isAuth = false
 		return next()

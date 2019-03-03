@@ -36,12 +36,9 @@ app.use(
 
 const DB_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/camel'
 mongoose
-	.connect(
-		DB_URL,
-		{
-			useNewUrlParser: true
-		}
-	)
+	.connect(DB_URL, {
+		useNewUrlParser: true
+	})
 	.then(() => {
 		app.listen(8000)
 	})
@@ -52,7 +49,7 @@ mongoose
 
 const config = {
 	database: DB_URL,
-	dropDatabase: true
+	dropDatabase: false
 }
 
 const seeder = new Seeder(config)

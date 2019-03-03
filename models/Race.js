@@ -85,4 +85,4 @@ const raceSchema = new Schema({
 	}
 })
 
-module.exports = mongoose.model('Race', raceSchema)
+module.exports = mongoose.model('Races', raceSchema, 'Races')

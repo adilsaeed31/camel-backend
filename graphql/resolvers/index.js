@@ -1,7 +1,7 @@
-const camelResolver = require("./camel")
+const camelResolver = require('./race')
 
 const rootResolver = {
-  ...camelResolver
+	...camelResolver
 }
 
 module.exports = rootResolver

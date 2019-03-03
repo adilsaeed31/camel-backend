@@ -13,7 +13,7 @@ type Race {
 }
 
 type Ranks {
-  position: Int!,
+  position: String!,
   category1: Int!,
   category2: Int!,
   category3: Int!,

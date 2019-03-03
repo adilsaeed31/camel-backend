@@ -1,12 +1,14 @@
-const Race = require('../../models/race')
+const Race = require('../../models/Race')
 
 const { transformRace } = require('./merge')
 
 module.exports = {
-	races: async () => {
+	races: async (args, req) => {
+		if (!req.isAuth) {
+			throw new Error('Unauthenticated!')
+		}
 		try {
 			const races = await Race.find()
-			console.log(races, 'Races records')
 			return races.map(race => {
 				return transformRace(race)
 			})
